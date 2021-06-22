@@ -1,0 +1,22 @@
+{
+  "name": "webpack-esbuild",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn build --watch --hot",
+    "build": "webpack --color --progress"
+  },
+  "devDependencies": {
+    "esbuild-loader": "2.13.1",
+    "fork-ts-checker-webpack-plugin": "6.2.12",
+    "nodemon-webpack-plugin": "4.5.2",
+    "typescript": "4.3.4",
+    "webpack": "5.40.0",
+    "webpack-cli": "4.7.2"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
+  }
+}
