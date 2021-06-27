@@ -114,3 +114,4 @@ build
 
 # Tmp
 tmp
+.DS_Store
