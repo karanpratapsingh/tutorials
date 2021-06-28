@@ -3,7 +3,7 @@ const path = require('path');
 
 // Webpack plugins
 const NodemonPlugin = require('nodemon-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ForkTsCheckerPlugin = require('fork-ts-checker-webpack-plugin');
 
 // Environment config
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -57,7 +57,7 @@ function getLoaders() {
  */
 function getPlugins() {
   const nodemon = new NodemonPlugin();
-  const tsChecker = new ForkTsCheckerWebpackPlugin();
+  const tsChecker = new ForkTsCheckerPlugin();
 
   return [tsChecker, nodemon];
 }

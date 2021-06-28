@@ -2,6 +2,6 @@
 
 This repository contains code for all the tutorials I write about:
 
-1. [Webpack with ESbuild]()
+1. [Webpack with ESbuild](https://dev.to/karanpratapsingh/blazing-fast-typescript-with-webpack-and-esbuild-4mhh)
 2. [Go Fiber Introduction](https://dev.to/karanpratapsingh/introduction-to-go-fiber-2m0a)
 3. [Unit testing with Go]()
