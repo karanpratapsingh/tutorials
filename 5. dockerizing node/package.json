@@ -4,12 +4,14 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "build": "esbuild --bundle src/index.js --outfile=build/app.js --minify --platform=node"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "esbuild": "0.12.15",
+    "express": "4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "nodemon": "2.0.9"
   }
 }
