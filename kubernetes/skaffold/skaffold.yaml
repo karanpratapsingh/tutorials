@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta21
+kind: Config
+
+profiles:
+  - name: dev
+    activation:
+      - command: dev
+    build:
+      artifacts:
+        - image: express-app
+          context: .
+          sync:
+            manual:
+            - src: 'src/**/*.js'
+              dest: .
