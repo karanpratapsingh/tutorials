@@ -20,6 +20,7 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 			// Delete book and send response if the book Id matches dynamic Id
 			mocks.Books = append(mocks.Books[:index], mocks.Books[index+1:]...)
 
+			w.Header().Add("Content-Type", "application/json")
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode("Deleted")
 			break
