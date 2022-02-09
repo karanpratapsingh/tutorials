@@ -6,15 +6,24 @@ package graph
 import (
 	"context"
 	"example/graph/generated"
-	"fmt"
+
+	"github.com/nats-io/nats.go"
 )
 
 func (r *queryResolver) Payload(ctx context.Context) (*string, error) {
-	panic(fmt.Errorf("not implemented"))
+	value := "hello world"
+	return &value, nil
 }
 
 func (r *subscriptionResolver) Payload(ctx context.Context) (<-chan *string, error) {
-	panic(fmt.Errorf("not implemented"))
+	ch := make(chan *string)
+
+	r.Nats.Subscribe("payload-subject", func(msg *nats.Msg) {
+		payload := string(msg.Data)
+		ch <- &payload
+	})
+
+	return ch, nil
 }
 
 // Query returns generated.QueryResolver implementation.
