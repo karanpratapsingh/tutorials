@@ -1,0 +1,7 @@
+type Subscription {
+  payload: String
+}
+
+type Query {
+  payload: String
+}
