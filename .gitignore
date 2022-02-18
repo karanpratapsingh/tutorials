@@ -113,3 +113,6 @@ build
 # Tmp
 tmp
 .DS_Store
+
+# VSC
+**/.devcontainer/
